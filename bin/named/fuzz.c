@@ -111,11 +111,11 @@ fuzz_thread_client(void *arg) {
 			goto next;
 		}
 
-		// OQS updated from 4096 to 8192
+		// OQS updated from 4096 to 20480
 		/*
-		 * Ignore packets that are larger than 8192 bytes.
+		 * Ignore packets that are larger than 20480 bytes.
 		 */
-		if (length > 8192) {
+		if (length > 20480) {
 			/*
 			 * AFL_CMIN doesn't support persistent mode, so
 			 * shutdown the server.
@@ -365,8 +365,8 @@ fuzz_thread_resolver(void *arg) {
 			continue;
 		}
 
-		// OQS updated from 4096 to 8192
-		if (length > 8192) {
+		// OQS updated from 4096 to 20480
+		if (length > 20480) {
 			if (getenv("AFL_CMIN")) {
 				free(buf);
 				free(rbuf);

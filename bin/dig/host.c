@@ -212,8 +212,8 @@ printsection(dns_message_t *msg, dns_section_t sectionid,
 	isc_result_t result, loopresult;
 	isc_region_t r;
 	dns_name_t empty_name;
-	// OQS updated from 4096 to 8192
-	char tbuf[8192];
+	// OQS updated from 4096 to 20480
+	char tbuf[20480];
 	bool first;
 	bool no_rdata;
 
@@ -339,8 +339,8 @@ printrdata(dns_message_t *msg, dns_rdataset_t *rdataset,
 	isc_buffer_t target;
 	isc_result_t result;
 	isc_region_t r;
-	// OQS updated from 4096 to 8192
-	char tbuf[8192];
+	// OQS updated from 4096 to 20480
+	char tbuf[20480];
 
 	UNUSED(msg);
 	if (headers) {
