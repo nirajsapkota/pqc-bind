@@ -2520,8 +2520,8 @@ void
 ns_client_logv(ns_client_t *client, isc_logcategory_t *category,
 	       isc_logmodule_t *module, int level, const char *fmt,
 	       va_list ap) {
-	// OQS updated from 4096 to 30720
-	char msgbuf[30720];
+	// OQS updated from 4096 to 65535
+	char msgbuf[65535];
 	char signerbuf[DNS_NAME_FORMATSIZE], qnamebuf[DNS_NAME_FORMATSIZE];
 	char peerbuf[ISC_SOCKADDR_FORMATSIZE];
 	const char *viewname = "";

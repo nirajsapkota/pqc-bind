@@ -82,8 +82,8 @@
  ***/
 
 #define NS_CLIENT_TCP_BUFFER_SIZE  65535
-// OQS updated from 4096 to 30720
-#define NS_CLIENT_SEND_BUFFER_SIZE 30720
+// OQS updated from 4096 to 65535
+#define NS_CLIENT_SEND_BUFFER_SIZE 65535
 
 /*!
  * Client object states.  Ordering is significant: higher-numbered

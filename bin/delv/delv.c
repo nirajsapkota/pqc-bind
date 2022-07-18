@@ -596,11 +596,11 @@ key_fromconfig(const cfg_obj_t *key, dns_client_t *client) {
 	dns_rdata_ds_t ds;
 	uint32_t rdata1, rdata2, rdata3;
 	const char *datastr = NULL, *keynamestr = NULL, *atstr = NULL;
-	// OQS updated from 4096 to 30720
-	unsigned char data[30720];
+	// OQS updated from 4096 to 65355
+	unsigned char data[65355];
 	isc_buffer_t databuf;
-	// OQS updated from 4096 to 30720
-	unsigned char rrdata[30720];
+	// OQS updated from 4096 to 65355
+	unsigned char rrdata[65355];
 	isc_buffer_t rrdatabuf;
 	isc_region_t r;
 	dns_fixedname_t fkeyname;

@@ -49,7 +49,7 @@ ISC_LANG_BEGINDECLS
 #define ISCCC_ALG_HMACSHA512 165
 
 /*% Maximum Datagram Package */
-// OQS updated from 4096 to 30720
+// OQS updated from 4096 to 66535
 #define ISCCC_CC_MAXDGRAMPACKET 30720
 
 /*% Message Type String */

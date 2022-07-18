@@ -204,8 +204,8 @@ static void
 update_log(dns_update_log_t *callback, dns_zone_t *zone, int level,
 	   const char *fmt, ...) {
 	va_list ap;
-	// OQS updated from 4096 to 30720
-	char message[30720];
+	// OQS updated from 4096 to 65535
+	char message[65535];
 
 	if (callback == NULL) {
 		return;
