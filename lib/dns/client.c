@@ -231,8 +231,8 @@ getudpdispatch(int family, dns_dispatchmgr_t *dispatchmgr,
 		localaddr = &anyaddr;
 	}
 
-	// OQS updated from 4096 to 20480
-	buffersize = 20480;
+	// OQS updated from 4096 to 30720
+	buffersize = 30720;
 	maxbuffers = is_shared ? 1000 : 8;
 	maxrequests = 32768;
 	buckets = is_shared ? 16411 : 3;

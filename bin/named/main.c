@@ -129,8 +129,8 @@ LIBDNS_EXTERNAL_DATA extern unsigned int dns_zone_mkey_month;
 static bool want_stats = false;
 static char program_name[NAME_MAX] = "named";
 static char absolute_conffile[PATH_MAX];
-// OQS updated from 4096 to 20480
-static char saved_command_line[20480] = { 0 };
+// OQS updated from 4096 to 30720
+static char saved_command_line[30720] = { 0 };
 static char ellipsis[5] = { 0 };
 static char version[512];
 static unsigned int maxsocks = 0;

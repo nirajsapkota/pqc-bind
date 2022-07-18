@@ -201,8 +201,8 @@
 /*%
  * Maximum EDNS0 input packet size.
  */
-// OQS updated from 4096 to 20480
-#define RECV_BUFFER_SIZE 20480 /* XXXRTH  Constant. */
+// OQS updated from 4096 to 30720
+#define RECV_BUFFER_SIZE 30720 /* XXXRTH  Constant. */
 
 /*%
  * Default EDNS0 buffer size
@@ -2181,8 +2181,8 @@ fctx_query(fetchctx_t *fctx, dns_adbaddrinfo_t *addrinfo,
 			attrmask |= DNS_DISPATCHATTR_IPV6;
 			result = dns_dispatch_getudp(
 				res->dispatchmgr, res->socketmgr, res->taskmgr,
-				// OQS updated from 4096 to 20480
-				&addr, 20480, 20000, 32768, 16411, 16433, attrs,
+				// OQS updated from 4096 to 30720
+				&addr, 30720, 20000, 32768, 16411, 16433, attrs,
 				attrmask, &query->dispatch);
 			if (result != ISC_R_SUCCESS) {
 				goto cleanup_query;
@@ -3048,8 +3048,8 @@ resquery_connected(isc_task_t *task, isc_event_t *event) {
 
 			result = dns_dispatch_createtcp(
 				query->dispatchmgr, query->tcpsocket,
-				// OQS updated from 4096 to 20480
-				query->fctx->res->taskmgr, NULL, NULL, 20480, 2,
+				// OQS updated from 4096 to 30720
+				query->fctx->res->taskmgr, NULL, NULL, 30720, 2,
 				1, 1, 3, attrs, &query->dispatch);
 
 			/*
