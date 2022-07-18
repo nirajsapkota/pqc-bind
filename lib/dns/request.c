@@ -583,8 +583,8 @@ create_tcp_dispatch(bool newtcp, bool share, dns_requestmgr_t *requestmgr,
 	isc_socket_dscp(sock, dscp);
 	result = dns_dispatch_createtcp(
 		requestmgr->dispatchmgr, sock, requestmgr->taskmgr, srcaddr,
-		// OQS updated from 4096 to 30720
-		destaddr, 30720, 32768, 32768, 16411, 16433, attrs, dispatchp);
+		// OQS updated from 4096 to 65355
+		destaddr, 65355, 32768, 32768, 16411, 16433, attrs, dispatchp);
 cleanup:
 	isc_socket_detach(&sock);
 	return (result);
@@ -636,8 +636,8 @@ find_udp_dispatch(dns_requestmgr_t *requestmgr, const isc_sockaddr_t *srcaddr,
 	attrmask |= DNS_DISPATCHATTR_IPV6;
 	return (dns_dispatch_getudp(requestmgr->dispatchmgr,
 				    requestmgr->socketmgr, requestmgr->taskmgr,
-				    // OQS updated from 4096 to 30720
-				    srcaddr, 30720, 32768, 32768, 16411, 16433,
+				    // OQS updated from 4096 to 65355
+				    srcaddr, 65355, 32768, 32768, 16411, 16433,
 				    attrs, attrmask, dispatchp));
 }
 

@@ -3733,8 +3733,8 @@ check_trust_anchor(const cfg_obj_t *key, bool managed, unsigned int *flagsp,
 	isc_result_t result = ISC_R_SUCCESS;
 	isc_result_t tresult;
 	uint32_t rdata1, rdata2, rdata3;
-	// OQS updated from 4096 to 30720
-	unsigned char data[30720];
+	// OQS updated from 4096 to 65535
+	unsigned char data[65535];
 	const char *atstr = NULL;
 	enum {
 		INIT_DNSKEY,
