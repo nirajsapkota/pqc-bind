@@ -1541,9 +1541,9 @@ configure_peer(const cfg_obj_t *cpeer, isc_mem_t *mctx, dns_peer_t **peerp) {
 		if (udpsize < 512U) {
 			udpsize = 512U;
 		}
-		// OQS updated from 4096 to 8192
-		if (udpsize > 20480U) {
-			udpsize = 20480U;
+		// OQS updated from 4096 to 30720
+		if (udpsize > 30720U) {
+			udpsize = 30720U;
 		}
 		CHECK(dns_peer_setmaxudp(peer, (uint16_t)udpsize));
 	}
