@@ -11803,7 +11803,7 @@ dns_resolver_setretryinterval(dns_resolver_t *resolver, unsigned int interval) {
 	REQUIRE(VALID_RESOLVER(resolver));
 	REQUIRE(interval > 0);
 
-	resolver->retryinterval = ISC_MIN(interval, 2000);
+	resolver->retryinterval = ISC_MIN(interval, 30000);
 }
 
 unsigned int
