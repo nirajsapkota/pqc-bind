@@ -156,7 +156,7 @@
 /*
  * The maximum time we will wait for a single query.
  */
-#define MAX_SINGLE_QUERY_TIMEOUT    9000U
+#define MAX_SINGLE_QUERY_TIMEOUT    30000U
 #define MAX_SINGLE_QUERY_TIMEOUT_US (MAX_SINGLE_QUERY_TIMEOUT * US_PER_MSEC)
 
 /*
