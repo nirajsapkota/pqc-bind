@@ -48,7 +48,7 @@ jobs:
         run: |
           cd /home/runner/work/pqc-bind/pqc-bind/pqc-bind
           autoreconf -fi
-          ./configure CFLAGS="-Wl,--no-as-needed" LIBS="-loqs -ldl" CPPFLAGS="-I/home/runner/work/pqc-bind/pqc-bind/pqc-openssl/oqs/include" LDFLAGS="-L/home/runner/work/pqc-bind/pqc-bind/pqc-openssl-build/lib -L/home/runner/work/pqc-bind/pqc-bind/pqc-openssl/oqs/lib" --with-openssl=/home/runner/work/pqc-bind/pqc-bind/pqc-openssl --prefix=/home/runner/work/pqc-bind/pqc-bind/pqc-bind-build
+          ./configure CFLAGS="-Wl,--no-as-needed" LIBS="-loqs -ldl" CPPFLAGS="-I/home/runner/work/pqc-bind/pqc-bind/pqc-openssl/oqs/include" LDFLAGS="-L/home/runner/work/pqc-bind/pqc-bind/pqc-openssl-build/lib -L/home/runner/work/pqc-bind/pqc-bind/pqc-openssl/oqs/lib" --with-openssl=/home/runner/work/pqc-bind/pqc-bind/pqc-openssl --prefix=/home/runner/work/pqc-bind/pqc-bind/pqc-bind-build --sysconfdir=/etc
           sudo make
           sudo make install
 
